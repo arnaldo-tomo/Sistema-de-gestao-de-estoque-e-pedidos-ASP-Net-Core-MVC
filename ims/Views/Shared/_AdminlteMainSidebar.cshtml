@@ -27,7 +27,7 @@
                     <i class="fa fa-pie-chart"></i> <span>@MainMenu.Dashboard.PageName</span>
                 </a>
             </li>
-            <li class="header">SALES</li>
+            <li class="header">VENDAS</li>
 
             <li class="@Html.IsSelected(controller: MainMenu.CustomerType.ControllerName)">
                 <a href="@MainMenu.CustomerType.Path">
@@ -65,7 +65,7 @@
                 </a>
             </li>
 
-            <li class="header">PURCHASE</li>
+            <li class="header">COMPRAR</li>
 
             <li class="@Html.IsSelected(controller: MainMenu.VendorType.ControllerName)">
                 <a href="@MainMenu.VendorType.Path">
@@ -103,7 +103,7 @@
                 </a>
             </li>
 
-            <li class="header">INVENTORY</li>
+            <li class="header">Estoque</li>
 
             <li class="@Html.IsSelected(controller: MainMenu.Product.ControllerName)">
                 <a href="@MainMenu.Product.Path">
@@ -164,7 +164,7 @@
                 </a>
             </li>
 
-            <li class="header">USER & ROLE</li>
+            <li class="header">USUARIO & NIVEL DE ACESSO</li>
             <li class="@Html.IsSelected(controller: MainMenu.User.ControllerName, action: MainMenu.User.ActionName)">
                 <a href="@MainMenu.User.Path">
                     <i class="fa fa-users"></i> <span>@MainMenu.User.PageName</span>
