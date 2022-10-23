@@ -1,13 +1,13 @@
 ﻿@model LoginWithRecoveryCodeViewModel
 @{
-    ViewData["Title"] = "Recovery code verification";
+    ViewData["Title"] = "Verificação do código de recuperação";
 }
 
 <h2>@ViewData["Title"]</h2>
 <hr />
 <p>
-    You have requested to login with a recovery code. This login will not be remembered until you provide
-    an authenticator app code at login or disable 2FA and login again.
+    Você solicitou o login com um código de recuperação. Este login não será lembrado até que você forneça
+    um código de aplicativo autenticador no login ou desative o 2FA e faça login novamente.
 </p>
 <div class="row">
     <div class="col-md-4">
@@ -18,7 +18,7 @@
                 <input asp-for="RecoveryCode" class="form-control" autocomplete="off" />
                 <span asp-validation-for="RecoveryCode" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-default">Log in</button>
+            <button type="submit" class="btn btn-default">Entrar</button>
         </form>
     </div>
 </div>
