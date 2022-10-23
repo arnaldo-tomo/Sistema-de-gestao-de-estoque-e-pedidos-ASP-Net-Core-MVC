@@ -1,6 +1,6 @@
 @model TwoFactorAuthenticationViewModel
 @{
-    ViewData["Title"] = "Two-factor authentication";
+    ViewData["Title"] = "Autenticação de dois fatores";
     ViewData.AddActivePage(ManageNavPages.TwoFactorAuthentication);
 }
 
@@ -11,37 +11,37 @@
     {
         <div class="alert alert-danger">
             <strong>You have no recovery codes left.</strong>
-            <p>You must <a asp-action="GenerateRecoveryCodes">generate a new set of recovery codes</a> before you can log in with a recovery code.</p>
+            <p>Você deve <a asp-action="GenerateRecoveryCodes">gerar um novo conjunto de códigos de recuperação</a> antes de fazer login com um código de recuperação.</p>
         </div>
     }
     else if (Model.RecoveryCodesLeft == 1)
     {
         <div class="alert alert-danger">
-            <strong>You have 1 recovery code left.</strong>
-            <p>You can <a asp-action="GenerateRecoveryCodes">generate a new set of recovery codes</a>.</p>
+           <strong>Você tem 1 código de recuperação restante.</strong>
+            <p>Você pode <a asp-action="GenerateRecoveryCodes">gerar um novo conjunto de códigos de recuperação</a>.</p>
         </div>
     }
     else if (Model.RecoveryCodesLeft <= 3)
     {
         <div class="alert alert-warning">
-            <strong>You have @Model.RecoveryCodesLeft recovery codes left.</strong>
-            <p>You should <a asp-action="GenerateRecoveryCodes">generate a new set of recovery codes</a>.</p>
+           <strong>Você tem códigos de recuperação @Model.RecoveryCodesLeft restantes.</strong>
+            <p>Você deve <a asp-action="GenerateRecoveryCodes">gerar um novo conjunto de códigos de recuperação</a>.</p>
         </div>
     }
 
     <a asp-action="Disable2faWarning" class="btn btn-default">Disable 2FA</a>
-    <a asp-action="GenerateRecoveryCodesWarning" class="btn btn-default">Reset recovery codes</a>
+    <a asp-action="GenerateRecoveryCodesWarning" class="btn btn-default">Redefinir códigos de recuperação</a>
 }
 
 <h5>Authenticator app</h5>
 @if (!Model.HasAuthenticator)
 {
-    <a asp-action="EnableAuthenticator" class="btn btn-default">Add authenticator app</a>
+    <a asp-action="EnableAuthenticator" class="btn btn-default">Adicionar aplicativo autenticador</a>
 }
 else
 {
-    <a asp-action="EnableAuthenticator" class="btn btn-default">Configure authenticator app</a>
-    <a asp-action="ResetAuthenticatorWarning" class="btn btn-default">Reset authenticator key</a>
+    <a asp-action="EnableAuthenticator" class="btn btn-default">Configurar aplicativo autenticador</a>
+    <a asp-action="ResetAuthenticatorWarning" class="btn btn-default">Redefinir a chave do autenticador</a>
 }
 
 @section Scripts {
