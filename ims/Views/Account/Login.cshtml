@@ -6,7 +6,7 @@
 @inject SignInManager<ApplicationUser> SignInManager
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "MunhavaEstoque - Login";
 }
 
 <div class="login-box">
@@ -16,17 +16,17 @@
         <div class="login-logo">
             <a href="/"><b>Munhava</b>Estoque</a>
         </div>
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg">Faça login para iniciar sua sessão</p>
         <div asp-validation-summary="All" class="text-danger"></div>
         <form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
             <div class="form-group has-feedback">
-                <label asp-for="Email"></label>
+                <label asp-for="Email">Informe o seu Email</label>
                 <input asp-for="Email" type="email" value="super@admin.com" class="form-control" placeholder="Email" />
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group has-feedback">
-                <label asp-for="Password"></label>
+                <label asp-for="Password">Informe a sua Senha</label>
                 <input asp-for="Password" type="password" value="123456" class="form-control" placeholder="Password" />
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 <span asp-validation-for="Password" class="text-danger"></span>
@@ -42,17 +42,17 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
                 </div>
                 <!-- /.col -->
             </div>
           
             <!-- /.social-auth-links -->
-            <a asp-action="ForgotPassword">I forgot my password</a><br>
-            <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" class="text-center">Register a new membership</a>
-            <p class="pull-right">
+            <a asp-action="ForgotPassword">Esqueci a minha senha</a><br>
+            <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" class="text-center">Registar uma nova associação</a>
+            <!-- <p class="pull-right">
                 <span style="font-style:italic;"><small>*Demo => Email: super@admin.com Password: 123456</small></span>
-            </p>
+            </p> -->
         </form>
 
 
