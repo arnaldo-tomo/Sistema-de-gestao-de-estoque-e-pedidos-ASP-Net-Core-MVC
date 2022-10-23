@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Dashboard Main";
+    ViewData["Title"] = "Dashboard";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -11,7 +11,7 @@
             <div class="col-lg-6">
                 <div class="box">
                     <div class="box-header with-border">
-                        <h3 class="box-title text-primary"><i class="fa fa-pie-chart"></i> Products</h3>
+                        <h3 class="box-title text-primary"><i class="fa fa-pie-chart"></i> Produtos</h3>
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                                     title="Collapse">
@@ -30,7 +30,7 @@
             <div class="col-lg-6">
                 <div class="box">
                     <div class="box-header with-border">
-                        <h3 class="box-title text-primary"><i class="fa fa-pie-chart"></i> Customers</h3>
+                        <h3 class="box-title text-primary"><i class="fa fa-pie-chart"></i> Clientes</h3>
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                                     title="Collapse">
@@ -51,7 +51,7 @@
             <div class="col-lg-12">
                 <div class="box">
                     <div class="box-header with-border">
-                        <h3 class="box-title text-primary"><i class="fa fa-pie-chart"></i> Sales vs Purchase</h3>
+                        <h3 class="box-title text-primary"><i class="fa fa-pie-chart"></i> Vendas & Compra</h3>
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                                     title="Collapse">
@@ -106,11 +106,11 @@
                     series:
                         [
                             {
-                                points: [{ x: "Watching TV", text: "Watching TV", y: 56 },
-                                { x: "Socializing", text: "Socializing", y: 26 },
-                                { x: "Reading", text: "Reading", y: 3 },
-                                { x: "Sports", text: "Sports", y: 7 },
-                                { x: "Others", text: "Others", y: 8 }],
+                                points: [{ x: "Watching TV", text: "Assistindo TV", y: 56 },
+                                    { x: "Socializing", text: "Socialização", y: 26 },
+                                    { x: "Reading", text: "Leitura", y: 3 },
+                                    { x: "Sports", text: "Esportes", y: 7 },
+                                    { x: "Others", text: "Outros", y: 8 }],
 
                                 type: 'doughnut',
                                 explodeIndex: 4,
@@ -128,7 +128,7 @@
                     perspectiveAngle: 90,
                     isResponsive: true,
                     load: "onchartload",
-                    title: { text: "People's Hobbies" },
+                    title: { text: "Passatempos das pessoas" },
                     size: { height: "300", width: "400" },
                     legend: { visible: false }
                 });
@@ -166,7 +166,7 @@
                         ],
                     load: "loadTheme",
                     isResponsive: true,
-                    title: { text: 'Web Site Visitor' },
+                    title: { text: 'Visitante do do Sistema' },
                     size: { height: "300" },
                     legend: { visible: true, position: 'top' }
                 });
@@ -176,13 +176,13 @@
                     //Initializing Primary X Axis
                     primaryXAxis:
                         {
-                            title: { text: "Month" }
+                            title: { text: "Mês" }
                         },
 
                     //Initializing Primary Y Axis	
                     primaryYAxis:
                         {
-                            title: { text: "Unit Sold" }
+                            title: { text: "Unidade vendida" }
                         },
                     axes:
                         [
@@ -197,7 +197,7 @@
                                 rangePadding: 'normal',
                                 name: 'yAxis',
                                 labelFormat: '${value}',
-                                title: { text: "Total Transactions" }
+                                title: { text: "Total de transações" }
                             }
                         ],
 
@@ -211,21 +211,21 @@
                     series:
                         [
                             {
-                                points: [{ x: "Jan", y: 45 }, { x: "Feb", y: 100 }, { x: "March", y: 25 },
-                                { x: "April", y: 100 }, { x: "May", y: 85 }, { x: "June", y: 140 }],
+                                points: [{ x: "Jananeiro", y: 45 }, { x: "Feveiro", y: 100 }, { x: "Marco", y: 25 },
+                                { x: "Abril", y: 100 }, { x: "Maio", y: 85 }, { x: "julnho", y: 140 }],
                                 fill: "#69D2E7",
-                                name: 'Unit Sold',
+                                name: 'Unidade vendida',
                                 type: 'column',
                                 enableAnimation: true,
                                 tooltip:
                                     {
-                                        format: "#point.x# <br/> Unit Sold : #point.y# <br/>"
+                                        format: "#point.x# <br/> Unidade vendida : #point.y# <br/>"
                                     }
                             },
                             {
                                 points: [{ x: "Jan", y: 1000 }, { x: "Feb", y: 3000 }, { x: "March", y: 1000 },
                                 { x: "April", y: 7000 }, { x: "May", y: 5000 }, { x: "June", y: 7000 }],
-                                name: 'Total Transaction',
+                                name: 'Transação total',
                                 type: 'line',
                                 enableAnimation: true,
                                 yAxisName: 'yAxis',
@@ -247,7 +247,7 @@
                         ],
                     load: "loadTheme",
                     isResponsive: true,
-                    title: { text: 'Sales Report ' },
+                    title: { text: 'Relatório de vendas ' },
                     size: { height: "300" },
                     legend:
                         {
