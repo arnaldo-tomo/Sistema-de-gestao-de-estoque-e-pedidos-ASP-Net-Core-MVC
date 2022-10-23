@@ -1,7 +1,7 @@
 ﻿@model ims.Models.ApplicationUser
 @inject ims.Data.ApplicationDbContext Context
 @{
-    ViewData["Title"] = "User Profile";
+    ViewData["Title"] = "Perfil de usuário";
     UserProfile profile = Context.UserProfile.SingleOrDefault(x => x.ApplicationUserId.Equals(Model.Id));
 }
 
@@ -47,15 +47,15 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="form-group">
-                            <div class="col-lg-3">Email</div>
+                            <div class="col-lg-3">Seu E-mail</div>
                             <div class="col-lg-9"><input class="form-control" value="@profile.Email" disabled/></div>
                         </div>
                         <div class="form-group">
-                            <div class="col-lg-3">First Name</div>
+                            <div class="col-lg-3">Nome</div>
                             <div class="col-lg-9"><input class="form-control" value="@profile.FirstName" disabled /></div>
                         </div>
                         <div class="form-group">
-                            <div class="col-lg-3">Last Name</div>
+                            <div class="col-lg-3">Apelido</div>
                             <div class="col-lg-9"><input class="form-control" value="@profile.LastName" disabled /></div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
         </div>
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title text-primary"><i class="fa fa-user"></i> Edit Profile </h3>
+                <h3 class="box-title text-primary"><i class="fa fa-user"></i> Editar Perfil</h3>
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                             title="Collapse">
@@ -86,7 +86,7 @@
         </div>
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title text-primary"><i class="fa fa-key"></i> Change Password </h3>
+                <h3 class="box-title text-primary"><i class="fa fa-key"></i> Mudar senha </h3>
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                             title="Collapse">
@@ -113,7 +113,7 @@
     <table cellspacing="10">
         <tr>
             <td>
-                Email
+                Seu E-mail
             </td>
             <td colspan="3">
                 <input id="EmailPassword" name="EmailPassword" value="{{:Email}}" />
@@ -121,13 +121,13 @@
         </tr>
         <tr>
             <td>
-                First Name
+               Nome
             </td>
             <td>
                 <input id="FirstNamePassword" name="FirstNamePassword" value="{{:FirstName}}" />
             </td>
             <td>
-                Last Name
+               Sobrenome
             </td>
             <td>
                 <input id="LastNamePassword" name="LastNamePassword" value="{{:LastName}}" />
@@ -135,7 +135,7 @@
         </tr>
         <tr>
             <td>
-                Old Password
+               Senha Antiga 
             </td>
             <td>
                 <input id="OldPassword" name="OldPassword" value="" />
@@ -145,13 +145,13 @@
         </tr>
         <tr>
             <td>
-                New Password
+               Nova Senha
             </td>
             <td>
                 <input id="Password" name="Password" value="" />
             </td>
             <td>
-                Re-type Password
+               Redigite a senha
             </td>
             <td>
                 <input id="ConfirmPassword" name="ConfirmPassword" value="" />
@@ -165,7 +165,7 @@
     <table cellspacing="10">
         <tr>
             <td>
-                Email
+                Seu E-mail
             </td>
             <td colspan="3">
                 <input id="Email" name="Email" value="{{:Email}}" />
@@ -173,13 +173,13 @@
         </tr>
         <tr>
             <td>
-                First Name
+                Sobre
             </td>
             <td>
                 <input id="FirstName" name="FirstName" value="{{:FirstName}}" />
             </td>
             <td>
-                Last Name
+                Sobrenome
             </td>
             <td>
                 <input id="LastName" name="LastName" value="{{:LastName}}" />
