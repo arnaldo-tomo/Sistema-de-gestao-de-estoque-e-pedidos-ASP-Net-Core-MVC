@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Customer Type";
+    ViewData["Title"] = "Tipo de Cliente";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -84,9 +84,9 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "CustomerTypeId", headerText: 'Customer Type Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "CustomerTypeName", headerText: 'Customer Type Name', validationRules: { required: true } },
-                        { field: "Description", headerText: 'Description', },
+                        { field: "CustomerTypeId", headerText: 'cliente Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "CustomerTypeName", headerText: 'Nome do cliente', validationRules: { required: true } },
+                        { field: "Description", headerText: 'Descrição', },
                     ],
                     actionComplete: "complete",
                 });
@@ -97,7 +97,7 @@
 
         function complete(args) {
             if (args.requestType == 'beginedit') {
-                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Record" });
+                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editar registro" });
             }
         }
 

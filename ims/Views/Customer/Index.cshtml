@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Customer";
+    ViewData["Title"] = "Cliente";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -89,16 +89,16 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "CustomerId", headerText: 'Customer Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "CustomerName", headerText: 'Customer Name', validationRules: { required: true } },
-                        { field: "CustomerTypeId", headerText: 'Customer Type', foreignKeyField: "CustomerTypeId", foreignKeyValue: "CustomerTypeName", dataSource: dataManagerCustomerType },
-                        { field: "Address", headerText: 'Address', },
-                        { field: "City", headerText: 'City', },
-                        { field: "State", headerText: 'State', },
-                        { field: "ZipCode", headerText: 'ZipCode', },
-                        { field: "Phone", headerText: 'Phone', },
-                        { field: "Email", headerText: 'Email', },
-                        { field: "ContactPerson", headerText: 'CP', },
+                        { field: "CustomerId", headerText: 'Cliente Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "CustomerName", headerText: 'Cliente Nome', validationRules: { required: true } },
+                        { field: "CustomerTypeId", headerText: 'Cliente Tipo', foreignKeyField: "CustomerTypeId", foreignKeyValue: "CustomerTypeName", dataSource: dataManagerCustomerType },
+                        { field: "Address", headerText: 'Endereço', },
+                        { field: "City", headerText: 'Pais', },
+                        { field: "State", headerText: 'Cidade', },
+                        { field: "ZipCode", headerText: 'Código postal', },
+                        { field: "Phone", headerText: 'Telefone', },
+                        { field: "Email", headerText: 'E-mail', },
+                        { field: "ContactPerson", headerText: 'NUIT', },
                     ],
                     actionComplete: "complete",
                 });
@@ -109,7 +109,7 @@
 
         function complete(args) {
             if (args.requestType == 'beginedit') {
-                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Record" });
+                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editar registro" });
             }
         }
 

@@ -4,7 +4,7 @@
     {
         public static class Customer
         {
-            public const string PageName = "Customer";
+            public const string PageName = "Cliente";
             public const string RoleName = "Customer";
             public const string Path = "/Customer/Index";
             public const string ControllerName = "Customer";
@@ -139,7 +139,7 @@
 
         public static class CustomerType
         {
-            public const string PageName = "Customer Type";
+            public const string PageName = "Tipo de Clientes";
             public const string RoleName = "Customer Type";
             public const string Path = "/CustomerType/Index";
             public const string ControllerName = "CustomerType";
