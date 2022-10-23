@@ -8,6 +8,8 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    background-color: rgb(43, 101, 226);
+
 }
 
 /* Carousel */
@@ -28,6 +30,7 @@
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
+
     /* Hide captions */
     .carousel-caption {
         display: none;
