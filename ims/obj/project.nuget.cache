@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qcNqUSCdHoA6ZD30gTyonxRITCNhNIrsa9WrTTBU4kohKfeqUyEPj2nFIHQcHsnFvpsuekUk1GAcKO/y2JZfIQ==",
+  "dgSpecHash": "wt312JEqo9ul0pNMPwfY8hZI8/mqDoj7bM7bxgi4sT/mPO6IrMgUCfsq5oIajfAK6Hti9R07NW3+YurV9ZcNjQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Arnaldo Tomo\\Desktop\\Inventory-Management-System-main_2\\Inventory-Management-System-main\\Inventory-Order-Management-System\\ims\\ims.csproj",
+  "projectFilePath": "C:\\Users\\Arnaldo Tomo\\source\\repos\\Sistema-de-gestao-de-estoque-e-pedidos-ASP-Net-Core-MVC\\ims\\ims.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Arnaldo Tomo\\.nuget\\packages\\libuv\\1.10.0\\libuv.1.10.0.nupkg.sha512",
     "C:\\Users\\Arnaldo Tomo\\.nuget\\packages\\microsoft.applicationinsights\\2.4.0\\microsoft.applicationinsights.2.4.0.nupkg.sha512",

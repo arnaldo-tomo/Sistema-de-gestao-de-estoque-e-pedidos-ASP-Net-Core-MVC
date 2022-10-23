@@ -14879,11 +14879,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arnaldo Tomo\\Desktop\\Inventory-Management-System-main_2\\Inventory-Management-System-main\\Inventory-Order-Management-System\\ims\\ims.csproj",
+      "projectUniqueName": "C:\\Users\\Arnaldo Tomo\\source\\repos\\Sistema-de-gestao-de-estoque-e-pedidos-ASP-Net-Core-MVC\\ims\\ims.csproj",
       "projectName": "ims",
-      "projectPath": "C:\\Users\\Arnaldo Tomo\\Desktop\\Inventory-Management-System-main_2\\Inventory-Management-System-main\\Inventory-Order-Management-System\\ims\\ims.csproj",
+      "projectPath": "C:\\Users\\Arnaldo Tomo\\source\\repos\\Sistema-de-gestao-de-estoque-e-pedidos-ASP-Net-Core-MVC\\ims\\ims.csproj",
       "packagesPath": "C:\\Users\\Arnaldo Tomo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Arnaldo Tomo\\Desktop\\Inventory-Management-System-main_2\\Inventory-Management-System-main\\Inventory-Order-Management-System\\ims\\obj\\",
+      "outputPath": "C:\\Users\\Arnaldo Tomo\\source\\repos\\Sistema-de-gestao-de-estoque-e-pedidos-ASP-Net-Core-MVC\\ims\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
