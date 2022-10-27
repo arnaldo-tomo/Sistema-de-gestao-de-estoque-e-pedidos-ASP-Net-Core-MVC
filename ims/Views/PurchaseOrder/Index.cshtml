@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Ordem de Compra";
+    ViewData["Title"] = "Pedido de Compra";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -104,16 +104,16 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { headerText: 'Detail', template: "<a href='/PurchaseOrder/Detail/{{:PurchaseOrderId}}'>Detail</a>" },
-                        { field: "PurchaseOrderId", headerText: 'PO Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "PurchaseOrderName", headerText: 'PO#', allowEditing: false },
-                        { field: "BranchId", headerText: 'Branch', foreignKeyField: "BranchId", foreignKeyValue: "BranchName", dataSource: dataManagerBranch, validationRules: { required: true } },
-                        { field: "VendorId", headerText: 'Vendor', foreignKeyField: "VendorId", foreignKeyValue: "VendorName", dataSource: dataManagerVendor, validationRules: { required: true } },
-                        { field: "OrderDate", headerText: 'Order Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "DeliveryDate", headerText: 'Delivery Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "PurchaseTypeId", headerText: 'Purchase Type', foreignKeyField: "PurchaseTypeId", foreignKeyValue: "PurchaseTypeName", dataSource: dataManagerPurchaseType },
-                        { field: "CurrencyId", headerText: 'Currency', allowEditing: false, foreignKeyField: "CurrencyId", foreignKeyValue: "CurrencyName", dataSource: dataManagerCurrency },
-                        { field: "Freight", headerText: 'Freight', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
+                        { headerText: 'Detalhes', template: "<a href='/PurchaseOrder/Detail/{{:PurchaseOrderId}}'>Detail</a>" },
+                        { field: "PurchaseOrderId", headerText: 'ID Pedido', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "PurchaseOrderName", headerText: 'NOme do pedido#', allowEditing: false },
+                        { field: "BranchId", headerText: 'TipoID', foreignKeyField: "BranchId", foreignKeyValue: "BranchName", dataSource: dataManagerBranch, validationRules: { required: true } },
+                        { field: "VendorId", headerText: 'Fornecedor', foreignKeyField: "VendorId", foreignKeyValue: "VendorName", dataSource: dataManagerVendor, validationRules: { required: true } },
+                        { field: "OrderDate", headerText: 'Data do pedido', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "DeliveryDate", headerText: 'Data de entrega', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "PurchaseTypeId", headerText: 'Tipo de compra', foreignKeyField: "PurchaseTypeId", foreignKeyValue: "PurchaseTypeName", dataSource: dataManagerPurchaseType },
+                        { field: "CurrencyId", headerText: 'MoedaID', allowEditing: false, foreignKeyField: "CurrencyId", foreignKeyValue: "CurrencyName", dataSource: dataManagerCurrency },
+                        { field: "Freight", headerText: 'Caminhao', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
                     ],
                     actionComplete: "complete",
                 });
@@ -124,7 +124,7 @@
 
         function complete(args) {
             if (args.requestType == 'beginedit') {
-                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Record" });
+                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editar registro" });
             }
             if (args.requestType == 'beginedit' || args.requestType == 'add') {
                 $('#GridBranchId').ejDropDownList({ change: 'branchDdlChange' });
