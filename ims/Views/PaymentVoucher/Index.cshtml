@@ -99,14 +99,14 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "PaymentvoucherId", headerText: 'Payment Voucher', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "PaymentVoucherName", headerText: 'Payment Voucher#', allowEditing: false },
-                        { field: "IsFullPayment", headerText: 'Full Payment', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
-                        { field: "BillId", headerText: 'Bill#', foreignKeyField: "BillId", foreignKeyValue: "BillName", dataSource: dataManagerBill, validationRules: { required: true } },
-                        { field: "PaymentDate", headerText: 'Payment Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "PaymentTypeId", headerText: 'Payment Type', foreignKeyField: "PaymentTypeId", foreignKeyValue: "PaymentTypeName", dataSource: dataManagerPaymentType },
-                        { field: "CashBankId", headerText: 'Payment Source', foreignKeyField: "CashBankId", foreignKeyValue: "CashBankName", dataSource: dataManagerCashBank },
-                        { field: "PaymentAmount", headerText: 'Payment Amount', editType: "numericedit", format: "{0:n2}", validationRules: { required: true } },
+                        { field: "PaymentvoucherId", headerText: 'ID', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "PaymentVoucherName", headerText: 'Comprovante de pagamento#', allowEditing: false },
+                        { field: "IsFullPayment", headerText: 'Pagamento integral', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
+                        { field: "BillId", headerText: 'ContaID#', foreignKeyField: "BillId", foreignKeyValue: "BillName", dataSource: dataManagerBill, validationRules: { required: true } },
+                        { field: "PaymentDate", headerText: 'Data de pagamento', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "PaymentTypeId", headerText: 'Tipo de pagamento', foreignKeyField: "PaymentTypeId", foreignKeyValue: "PaymentTypeName", dataSource: dataManagerPaymentType },
+                        { field: "CashBankId", headerText: 'Fonte de pagamento', foreignKeyField: "CashBankId", foreignKeyValue: "CashBankName", dataSource: dataManagerCashBank },
+                        { field: "PaymentAmount", headerText: 'Valor do pagamento', editType: "numericedit", format: "{0:n2}", validationRules: { required: true } },
                     ],
                     actionComplete: "complete",
                 });
@@ -117,7 +117,7 @@
 
         function complete(args) {
             if (args.requestType == 'beginedit') {
-                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Record" });
+                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editar registro" });
             }
             if (args.requestType == 'beginedit' || args.requestType == 'add') {
                 var selected = $('#GridBillId').data('ejDropDownList');
