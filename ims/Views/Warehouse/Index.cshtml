@@ -89,10 +89,10 @@
                 allowPaging: true,
                 pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                 columns: [
-                    { field: "WarehouseId", headerText: 'Warehouse Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                    { field: "WarehouseName", headerText: 'Warehouse Name', validationRules: { required: true } },
-                    { field: "Description", headerText: 'Description', },
-                    { field: "BranchId", headerText: 'Branch', foreignKeyField: "BranchId", foreignKeyValue: "BranchName", dataSource: dataManagerBranch },
+                    { field: "WarehouseId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                    { field: "WarehouseName", headerText: 'Nome do Armazém', validationRules: { required: true } },
+                    { field: "Description", headerText: 'Descrição', },
+                    { field: "BranchId", headerText: 'Tipo', foreignKeyField: "BranchId", foreignKeyValue: "BranchName", dataSource: dataManagerBranch },
                 ],
                 actionComplete: "complete",
             });
@@ -103,7 +103,7 @@
 
     function complete(args) {
         if (args.requestType == 'beginedit') {
-            $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Record" });
+            $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editar registro" });
         }
 
     }
