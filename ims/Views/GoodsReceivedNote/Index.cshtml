@@ -94,14 +94,14 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "GoodsReceivedNoteId", headerText: 'GRN', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "GoodsReceivedNoteName", headerText: 'GRN#', allowEditing: false },
-                        { field: "IsFullReceive", headerText: 'Full Receive', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
-                        { field: "PurchaseOrderId", headerText: 'PO#', foreignKeyField: "PurchaseOrderId", foreignKeyValue: "PurchaseOrderName", dataSource: dataManagerPurchaseOrder, validationRules: { required: true } },
-                        { field: "GRNDate", headerText: 'Receiving Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "VendorDONumber", headerText: 'Vendor DO#', validationRules: { required: true } },
-                        { field: "VendorInvoiceNumber", headerText: 'Vendor Invoice#', },
-                        { field: "WarehouseId", headerText: 'Warehouse', foreignKeyField: "WarehouseId", foreignKeyValue: "WarehouseName", dataSource: dataManagerWarehouse, validationRules: { required: true } },
+                        { field: "GoodsReceivedNoteId", headerText: 'ID', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "GoodsReceivedNoteName", headerText: 'Entrda#', allowEditing: false },
+                        { field: "IsFullReceive", headerText: 'Recepção completa', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
+                        { field: "PurchaseOrderId", headerText: 'ID do Pedido#', foreignKeyField: "PurchaseOrderId", foreignKeyValue: "PurchaseOrderName", dataSource: dataManagerPurchaseOrder, validationRules: { required: true } },
+                        { field: "GRNDate", headerText: 'Data de recebimento', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "VendorDONumber", headerText: 'Fornecedor nr#', validationRules: { required: true } },
+                        { field: "VendorInvoiceNumber", headerText: 'Fatura do fornecedor#', },
+                        { field: "WarehouseId", headerText: 'Armazém', foreignKeyField: "WarehouseId", foreignKeyValue: "WarehouseName", dataSource: dataManagerWarehouse, validationRules: { required: true } },
                     ],
                     actionComplete: "complete",
                 });
@@ -112,7 +112,7 @@
 
         function complete(args) {
             if (args.requestType == 'beginedit') {
-                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Record" });
+                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editar registro" });
             }
 
             if (args.requestType == 'beginedit' || args.requestType == 'add') {
