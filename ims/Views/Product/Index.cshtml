@@ -99,16 +99,16 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "ProductId", headerText: 'Product Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "ProductName", headerText: 'Product Name', validationRules: { required: true } },
-                        { field: "UnitOfMeasureId", headerText: 'UOM', foreignKeyField: "UnitOfMeasureId", foreignKeyValue: "UnitOfMeasureName", dataSource: dataManagerUnitOfMeasure, validationRules: { required: true } },
-                        { field: "Barcode", headerText: 'Barcode', },
-                        { field: "Description", headerText: 'Description', },
-                        { field: "ProductImageUrl", headerText: 'ProductImageUrl', visible: false },
-                        { field: "DefaultBuyingPrice", headerText: 'Buying Price', editType: "numericedit", format: "{0:n2}" },
-                        { field: "DefaultSellingPrice", headerText: 'Selling Price', editType: "numericedit", format: "{0:n2}" },
-                        { field: "BranchId", headerText: 'Branch', foreignKeyField: "BranchId", foreignKeyValue: "BranchName", dataSource: dataManagerBranch },
-                        { field: "CurrencyId", headerText: 'Currency', allowEditing: false, foreignKeyField: "CurrencyId", foreignKeyValue: "CurrencyCode", dataSource: dataManagerCurrency },
+                        { field: "ProductId", headerText: 'ID', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "ProductName", headerText: 'Nome do Produto', validationRules: { required: true } },
+                        { field: "UnitOfMeasureId", headerText: 'ID Media', foreignKeyField: "UnitOfMeasureId", foreignKeyValue: "UnitOfMeasureName", dataSource: dataManagerUnitOfMeasure, validationRules: { required: true } },
+                        { field: "Barcode", headerText: 'Código de barras', },
+                        { field: "Description", headerText: 'Descrição', },
+                        { field: "ProductImageUrl", headerText: 'Imagem do produto', visible: false },
+                        { field: "DefaultBuyingPrice", headerText: 'Preço de compra', editType: "numericedit", format: "{0:n2}" },
+                        { field: "DefaultSellingPrice", headerText: 'Preço de venda', editType: "numericedit", format: "{0:n2}" },
+                        { field: "BranchId", headerText: 'Tipo', foreignKeyField: "BranchId", foreignKeyValue: "BranchName", dataSource: dataManagerBranch },
+                        { field: "CurrencyId", headerText: 'MoedaID', allowEditing: false, foreignKeyField: "CurrencyId", foreignKeyValue: "CurrencyCode", dataSource: dataManagerCurrency },
                     ],
                     actionComplete: "complete",
                 });
@@ -119,7 +119,7 @@
 
         function complete(args) {
             if (args.requestType == 'beginedit') {
-                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Record" });
+                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editar registro" });
             }
             if (args.requestType == 'beginedit' || args.requestType == 'add') {
                 $('#GridBranchId').ejDropDownList({ change: 'branchDdlChange' });
