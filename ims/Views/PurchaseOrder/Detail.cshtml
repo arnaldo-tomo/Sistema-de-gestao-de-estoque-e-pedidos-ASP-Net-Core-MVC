@@ -202,28 +202,28 @@
 
             $('#BranchId').ejDropDownList({
                 dataSource: dataManagerBranch,
-                fields: { id: 'BranchId', text: 'BranchName', value: 'BranchId' },
+                fields: { id: 'BranchId', text: 'Nome da Filial', value: 'BranchId' },
                 value: @Model.BranchId,
                 enabled: false,
             });
 
             $('#VendorId').ejDropDownList({
                 dataSource: dataManagerVendor,
-                fields: { id: 'VendorId', text: 'VendorName', value: 'VendorId' },
+                fields: { id: 'VendorId', text: 'Nome do vendedor', value: 'VendorId' },
                 value: @Model.VendorId,
                 enabled: false,
             });
 
             $('#CurrencyId').ejDropDownList({
                 dataSource: dataManagerCurrency,
-                 fields: { id: 'CurrencyId', text: 'CurrencyName', value: 'CurrencyId' },
+                 fields: { id: 'CurrencyId', text: 'Nome da moeda', value: 'CurrencyId' },
                 value: @Model.CurrencyId,
                 enabled: false,
             });
 
             $('#PurchaseTypeId').ejDropDownList({
                 dataSource: dataManagerPurchaseType,
-                fields: { id: 'PurchaseTypeId', text: 'PurchaseTypeName', value: 'PurchaseTypeId' },
+                fields: { id: 'PurchaseTypeId', text: 'Tipo de Compra', value: 'PurchaseTypeId' },
                 value: @Model.PurchaseTypeId,
                 enabled: false,
             });
@@ -250,18 +250,18 @@
                 },
                 allowPaging: true,
                 columns: [
-                    { field: "PurchaseOrderLineId", headerText: 'Line Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                    { field: "PurchaseOrderId", headerText: 'PO#', defaultValue: @Model.PurchaseOrderId, foreignKeyField: "PurchaseOrderId", foreignKeyValue: "PurchaseOrderName", dataSource: dataManagerPurchaseOrder, visible: false },
-                    { field: "ProductId", headerText: 'Product', foreignKeyField: "ProductId", foreignKeyValue: "ProductName", dataSource: dataManagerProduct },
-                    { field: "Description", headerText: 'Description' },
-                    { field: "Quantity", headerText: 'Qty', defaultValue: 1, editType: "numericedit", format: "{0:n2}" },
-                    { field: "Price", headerText: 'Price', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
-                    { field: "Amount", headerText: 'Amount', defaultValue: 0, allowEditing: false, editType: "numericedit", format: "{0:n2}" },
-                    { field: "DiscountPercentage", headerText: 'Disc %', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
-                    { field: "DiscountAmount", headerText: 'Disc Amt', defaultValue: 0, visible: false, editType: "numericedit", format: "{0:n2}" },
+                    { field: "PurchaseOrderLineId", headerText: 'Pedido Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                    { field: "PurchaseOrderId", headerText: 'pedido de compra#', defaultValue: @Model.PurchaseOrderId, foreignKeyField: "PurchaseOrderId", foreignKeyValue: "PurchaseOrderName", dataSource: dataManagerPurchaseOrder, visible: false },
+                    { field: "ProductId", headerText: 'produtos', foreignKeyField: "ProductId", foreignKeyValue: "ProductName", dataSource: dataManagerProduct },
+                    { field: "Description", headerText: 'Descrição' },
+                    { field: "Quantity", headerText: 'Qunatidade', defaultValue: 1, editType: "numericedit", format: "{0:n2}" },
+                    { field: "Price", headerText: 'Preço', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
+                    { field: "Amount", headerText: 'Preço', defaultValue: 0, allowEditing: false, editType: "numericedit", format: "{0:n2}" },
+                    { field: "DiscountPercentage", headerText: 'Desc %', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
+                    { field: "DiscountAmount", headerText: 'Valor do desconto', defaultValue: 0, visible: false, editType: "numericedit", format: "{0:n2}" },
                     { field: "SubTotal", headerText: 'SubTotal', defaultValue: 0, allowEditing: false, editType: "numericedit", format: "{0:n2}" },
-                    { field: "TaxPercentage", headerText: 'Tax %', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
-                    { field: "TaxAmount", headerText: 'Tax Amt', defaultValue: 0, visible: false, editType: "numericedit", format: "{0:n2}" },
+                    { field: "TaxPercentage", headerText: 'Taxa %', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
+                    { field: "TaxAmount", headerText: 'Valor do imposto', defaultValue: 0, visible: false, editType: "numericedit", format: "{0:n2}" },
                     { field: "Total", headerText: 'Total', defaultValue: 0, allowEditing: false, editType: "numericedit", format: "{0:n2}" },
                 ],
                 actionComplete: "complete",
@@ -274,7 +274,7 @@
         function complete(args) {
 
             if (args.requestType == 'beginedit') {
-                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Record" });
+                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editar registro" });
             }
             if (args.requestType == 'save' || args.requestType == 'delete') {
                 RewriteTotal(args.data.PurchaseOrderId);
