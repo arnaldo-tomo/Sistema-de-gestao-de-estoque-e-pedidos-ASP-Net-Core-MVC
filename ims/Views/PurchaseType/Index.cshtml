@@ -84,9 +84,9 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "PurchaseTypeId", headerText: 'Purchase Type Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "PurchaseTypeName", headerText: 'Purchase Type Name', validationRules: { required: true } },
-                        { field: "Description", headerText: 'Description', },
+                        { field: "PurchaseTypeId", headerText: 'ID', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "PurchaseTypeName", headerText: 'Nome do tipo de compra', validationRules: { required: true } },
+                        { field: "Description", headerText: 'Descrição', },
                     ],
                     actionComplete: "complete",
                 });
@@ -97,7 +97,7 @@
 
         function complete(args) {
             if (args.requestType == 'beginedit') {
-                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Record" });
+                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editar registro" });
             }
         }
 
