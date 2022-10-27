@@ -90,17 +90,17 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "BranchId", headerText: 'Branch Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "BranchName", headerText: 'Branch Name', validationRules: { required: true } },
+                        { field: "BranchId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "BranchName", headerText: 'Nome da filial', validationRules: { required: true } },
                         { field: "Description", headerText: 'Description', },
-                        { field: "CurrencyId", headerText: 'Currency', foreignKeyField: "CurrencyId", foreignKeyValue: "CurrencyName", dataSource: dataManagerCurrency, validationRules: { required: true } },
-                        { field: "Address", headerText: 'Address', validationRules: { required: true } },
-                        { field: "City", headerText: 'City', },
-                        { field: "State", headerText: 'State', },
-                        { field: "ZipCode", headerText: 'ZipCode', },
-                        { field: "Phone", headerText: 'Phone', },
-                        { field: "Email", headerText: 'Email', },
-                        { field: "ContactPerson", headerText: 'CP', validationRules: { required: true } },
+                        { field: "CurrencyId", headerText: 'Moeda', foreignKeyField: "CurrencyId", foreignKeyValue: "CurrencyName", dataSource: dataManagerCurrency, validationRules: { required: true } },
+                        { field: "Address", headerText: 'Endereço', validationRules: { required: true } },
+                        { field: "City", headerText: 'Cidade', },
+                        { field: "State", headerText: 'Provincia', },
+                        { field: "ZipCode", headerText: 'Código postal', },
+                        { field: "Phone", headerText: 'Telefone', },
+                        { field: "Email", headerText: 'E-mail', },
+                        { field: "ContactPerson", headerText: 'NUIT', validationRules: { required: true } },
                     ],
                     actionComplete: "complete",
                 });
@@ -112,7 +112,7 @@
 
         function complete(args) {
             if (args.requestType == 'beginedit') {
-                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Record" });
+                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editar registro" });
             }
         }
 
