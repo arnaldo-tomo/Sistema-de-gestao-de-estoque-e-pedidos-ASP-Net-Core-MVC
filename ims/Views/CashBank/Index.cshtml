@@ -84,9 +84,9 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "CashBankId", headerText: 'Cash & Bank Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "CashBankName", headerText: 'Cash & Bank Name', validationRules: { required: true } },
-                        { field: "Description", headerText: 'Description', },
+                        { field: "CashBankId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "CashBankName", headerText: 'Nome do banco', validationRules: { required: true } },
+                        { field: "Description", headerText: 'Descrição', },
                     ],
                     actionComplete: "complete",
                 });
@@ -97,7 +97,7 @@
 
         function complete(args) {
             if (args.requestType == 'beginedit') {
-                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Record" });
+                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editar registro" });
             }
         }
 
