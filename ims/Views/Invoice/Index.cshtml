@@ -94,12 +94,12 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "InvoiceId", headerText: 'Invoice', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "InvoiceName", headerText: 'Invoice#', allowEditing: false },
-                        { field: "ShipmentId", headerText: 'Shipment / DO', foreignKeyField: "ShipmentId", foreignKeyValue: "ShipmentName", dataSource: dataManagerShipment, validationRules: { required: true } },
-                        { field: "InvoiceDate", headerText: 'Invoice Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "InvoiceDueDate", headerText: 'Invoice Due Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "InvoiceTypeId", headerText: 'Invoice Type', foreignKeyField: "InvoiceTypeId", foreignKeyValue: "InvoiceTypeName", dataSource: dataManagerInvoiceType },
+                        { field: "InvoiceId", headerText: 'FaturaID', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "InvoiceName", headerText: 'Fatura#', allowEditing: false },
+                        { field: "ShipmentId", headerText: 'envio / ID', foreignKeyField: "ShipmentId", foreignKeyValue: "ShipmentName", dataSource: dataManagerShipment, validationRules: { required: true } },
+                        { field: "InvoiceDate", headerText: 'Data da fatura', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "InvoiceDueDate", headerText: 'Data de vencimento da fatura', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "InvoiceTypeId", headerText: 'Tipo de fatura', foreignKeyField: "InvoiceTypeId", foreignKeyValue: "InvoiceTypeName", dataSource: dataManagerInvoiceType },
                     ],
                     actionComplete: "complete",
                 });
@@ -110,7 +110,7 @@
 
         function complete(args) {
             if (args.requestType == 'beginedit') {
-                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Record" });
+                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editar registro" });
             }
             if (args.requestType == 'beginedit' || args.requestType == 'add') {
                 var selected = $('#GridShipmentId').data('ejDropDownList');
