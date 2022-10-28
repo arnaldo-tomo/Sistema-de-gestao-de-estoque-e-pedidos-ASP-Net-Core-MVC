@@ -9,6 +9,7 @@ namespace ims.Controllers
         public IActionResult Index()
         {
             return View();
-        }
+        }raazsoren@gmail.com
+        surajsoren
     }
 }
