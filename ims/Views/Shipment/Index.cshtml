@@ -99,13 +99,13 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "ShipmentId", headerText: 'Shipment', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "ShipmentName", headerText: 'Shipment / DO#', allowEditing: false },
-                        { field: "IsFullShipment", headerText: 'Full Shipment', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
-                        { field: "SalesOrderId", headerText: 'SO#', foreignKeyField: "SalesOrderId", foreignKeyValue: "SalesOrderName", dataSource: dataManagerSalesOrder, validationRules: { required: true } },
-                        { field: "ShipmentDate", headerText: 'Shipment Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "ShipmentTypeId", headerText: 'Shipment Type', foreignKeyField: "ShipmentTypeId", foreignKeyValue: "ShipmentTypeName", dataSource: dataManagerShipmentType },
-                        { field: "WarehouseId", headerText: 'Warehouse', foreignKeyField: "WarehouseId", foreignKeyValue: "WarehouseName", dataSource: dataManagerWarehouse, validationRules: { required: true } },
+                        { field: "ShipmentId", headerText: 'envioID', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "ShipmentName", headerText: 'Nome do Envio#', allowEditing: false },
+                        { field: "IsFullShipment", headerText: 'Envio Completo', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
+                        { field: "SalesOrderId", headerText: 'VendaID#', foreignKeyField: "SalesOrderId", foreignKeyValue: "SalesOrderName", dataSource: dataManagerSalesOrder, validationRules: { required: true } },
+                        { field: "ShipmentDate", headerText: 'data de envio', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "ShipmentTypeId", headerText: 'Tipo de envio ', foreignKeyField: "ShipmentTypeId", foreignKeyValue: "ShipmentTypeName", dataSource: dataManagerShipmentType },
+                        { field: "WarehouseId", headerText: 'Armazen', foreignKeyField: "WarehouseId", foreignKeyValue: "WarehouseName", dataSource: dataManagerWarehouse, validationRules: { required: true } },
                     ],
                     actionComplete: "complete",
                 });
@@ -116,7 +116,7 @@
 
         function complete(args) {
             if (args.requestType == 'beginedit') {
-                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Record" });
+                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editra" });
             }
 
             if (args.requestType == 'beginedit' || args.requestType == 'add') {
