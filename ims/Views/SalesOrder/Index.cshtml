@@ -106,15 +106,15 @@
                     columns: [
                         { headerText: 'Detail', template: "<a href='/SalesOrder/Detail/{{:SalesOrderId}}'>Detail</a>" },
                         { field: "SalesOrderId", headerText: 'SO Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "SalesOrderName", headerText: 'SO#', allowEditing: false },
-                        { field: "BranchId", headerText: 'Branch', foreignKeyField: "BranchId", foreignKeyValue: "BranchName", dataSource: dataManagerBranch, validationRules: { required: true } },
-                        { field: "CustomerId", headerText: 'Customer', foreignKeyField: "CustomerId", foreignKeyValue: "CustomerName", dataSource: dataManagerCustomer, validationRules: { required: true } },
-                        { field: "OrderDate", headerText: 'Order Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "DeliveryDate", headerText: 'Delivery Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "SalesTypeId", headerText: 'Sales Type', foreignKeyField: "SalesTypeId", foreignKeyValue: "SalesTypeName", dataSource: dataManagerSalesType },
-                        { field: "CurrencyId", headerText: 'Currency', allowEditing: false, foreignKeyField: "CurrencyId", foreignKeyValue: "CurrencyName", dataSource: dataManagerCurrency },
-                        { field: "CustomerRefNumber", headerText: 'Cust. Ref#', validationRules: { required: true } },
-                        { field: "Freight", headerText: 'Freight', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
+                        { field: "SalesOrderName", headerText: 'Nome#', allowEditing: false },
+                        { field: "BranchId", headerText: 'ID', foreignKeyField: "BranchId", foreignKeyValue: "BranchName", dataSource: dataManagerBranch, validationRules: { required: true } },
+                        { field: "CustomerId", headerText: 'CLinet', foreignKeyField: "CustomerId", foreignKeyValue: "CustomerName", dataSource: dataManagerCustomer, validationRules: { required: true } },
+                        { field: "OrderDate", headerText: 'Date do Pedido', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "DeliveryDate", headerText: 'Data da entrega', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "SalesTypeId", headerText: 'STipo de vendas', foreignKeyField: "SalesTypeId", foreignKeyValue: "SalesTypeName", dataSource: dataManagerSalesType },
+                        { field: "CurrencyId", headerText: 'Moeda', allowEditing: false, foreignKeyField: "CurrencyId", foreignKeyValue: "CurrencyName", dataSource: dataManagerCurrency },
+                        { field: "CustomerRefNumber", headerText: 'Cliente. Ref#', validationRules: { required: true } },
+                        { field: "Freight", headerText: 'Carro', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
                     ],
                     actionComplete: "complete",
                 });
@@ -125,7 +125,7 @@
 
         function complete(args) {
             if (args.requestType == 'beginedit') {
-                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Record" });
+                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editar" });
             }
             if (args.requestType == 'beginedit' || args.requestType == 'add') {
                 $('#GridBranchId').ejDropDownList({ change: 'branchDdlChange' });
@@ -139,7 +139,7 @@
                 success: function (data) {
                     $("#GridCurrencyId").ejDropDownList({
                         dataSource: [data],
-                        fields: { id: 'CurrencyId', text: 'CurrencyCode', value: 'CurrencyId' },
+                        fields: { id: 'CurrencyId', text: 'Moeda', value: 'CurrencyId' },
                         value: data.CurrencyId
                     });
                 }
